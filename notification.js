@@ -4,8 +4,9 @@ const {PubSub} = require('@google-cloud/pubsub')
 dotenv.config()
 
 const pubSubClient = new PubSub()
-const subscriptionId = process.env.SUBSCRIPTION_ID
+const subscriptionId = 'my-sub'
 const subscription = pubSubClient.subscription(subscriptionId)
+// console.log("subscription ---", subscription);
 const timeout = 120
 
 function listenForMessages() {

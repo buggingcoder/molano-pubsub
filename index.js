@@ -9,19 +9,19 @@ const app = express()
 app.use(express.json())
 
 const pubSubClient = new PubSub()
-const pubSubTopicId = process.env.TOPIC_ID
+const pubSubTopicId = 'my-topic'
 
 const dummy_user_database = [
     {
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Yogesh',
+      email: 'yogesh.patel@mail.vinove.com',
       password: '1234567890'
     }
 ]
 
 app.post('/registration/', async (req, res) => {
     const { name, email, password } = req.body
-    const user = { name, email, password}
+    const user = { name, email, password }
     dummy_user_database.push(user)
 
     // Publish a message to the topic
