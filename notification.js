@@ -10,6 +10,8 @@ const subscription = pubSubClient.subscription(subscriptionId)
 const timeout = 120
 
 function listenForMessages() {
+    console.log("Listening for messages...");
+
     let messageCount = 0
     const messageHandler = message => {
         console.log(`New message ${message.id}:`)
@@ -25,7 +27,7 @@ function listenForMessages() {
     setTimeout(() => {
         subscription.removeListener('message', messageHandler)
         console.log(`${messageCount} message(s) received.`)
-    }, timeout * 1000)
+    }, timeout * 5000)
 }
 
 listenForMessages()

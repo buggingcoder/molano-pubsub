@@ -4,19 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
+    "listen-messages": "nodemon notification.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valdiearsanur/google-pub-sub-notification.git"
+    "url": "git+https://github.com/buggingcoder/molano-pubsub.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/valdiearsanur/google-pub-sub-notification/issues"
+    "url": "https://github.com/buggingcoder/molano-pubsub/issues"
   },
-  "homepage": "https://github.com/valdiearsanur/google-pub-sub-notification#readme",
+  "homepage": "https://github.com/buggingcoder/molano-pubsub#readme",
   "dependencies": {
     "@google-cloud/pubsub": "^3.0.1",
     "dotenv": "^16.0.1",
